@@ -38,11 +38,6 @@ CREATE TABLE `budget` (
 -- Dumping data for table `budget`
 --
 
-INSERT INTO `budget` (`ID`, `UserId`, `Budget`, `RDATE`) VALUES
-(4, 3, 10000.00, '2024-05-03 03:19:17'),
-(5, 4, 150000.00, '2024-05-03 07:17:45'),
-(6, 7, 5000000.00, '2024-05-04 01:46:57');
-
 -- --------------------------------------------------------
 
 --
@@ -60,14 +55,6 @@ CREATE TABLE `expense` (
 --
 -- Dumping data for table `expense`
 --
-
-INSERT INTO `expense` (`UserId`, `ID`, `Item`, `Cost`, `Date`) VALUES
-(7, 15, 'CPU Unit', 100500.00, '2024-05-02 16:00:00'),
-(7, 16, 'Infinix Hot 20s', 8000.00, '2024-05-03 16:00:00'),
-(7, 17, 'Bills', 1500.00, '2024-04-29 16:00:00'),
-(7, 18, 'Realme C32', 7999.00, '2024-04-30 16:00:00'),
-(3, 19, 'Infinix Hot 30s', 7000.00, '2024-05-02 16:00:00'),
-(3, 20, 'wifi', 1500.00, '2024-05-03 16:00:00');
 
 -- --------------------------------------------------------
 
@@ -88,13 +75,6 @@ CREATE TABLE `user` (
 --
 -- Dumping data for table `user`
 --
-
-INSERT INTO `user` (`Full_Name`, `Email`, `Username`, `UserId`, `Password`, `Photo`, `RegDate`) VALUES
-('Aldrin Ocampo', 'aldrinocampo102903@gmail.com', 'RinYuRin', 3, 'angelofdeath1029', '../static/images/userlogo.png', '2024-05-02 20:36:12'),
-('Yuki Orakawa', 'orakawayukirin102903@gmail.com', 'Yukirin', 4, 'dacb338a95bceb2f6c6dc7cb09381746', '../static/profileImages/1714717402_3925564bf80ec88248_0.jpg', '2024-05-03 00:23:23'),
-('Azrael', 'azraelking1029@gmail.com', 'FateAzrael', 7, '123456789', '', '2024-05-04 01:15:16'),
-('Cecilion', 'cecilionmlbb@gmail.com', 'ElegantVampire', 8, 'azraelking', '../img/', '2024-05-04 06:26:28'),
-('Rai Adalude', 'raiadalude@gmail.com', 'Raizen', 9, '987654321', '', '2024-05-04 06:36:46');
 
 --
 -- Indexes for dumped tables
