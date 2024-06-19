@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="../js/validator001.js"></script>
+</head>
+<style>
+    body {
+        background-image: url("https://getfullyfunded.com/wp-content/uploads/2019/03/budget-smallest.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        backdrop-filter: blur(1.2px);
+    }
+    @font-face {
+      font-family: 'Rogan-Regular';
+      font-style: normal;
+      font-weight: 400;
+      src: local(''), url('https://fonts.cdnfonts.com/s/107509/Rogan-Regular-BF654c4a9481d1b.woff') format('woff');
+    } .logtext {
+      font-family: 'Rogan-Regular';
+    } .buttonlog {
+      font-family: 'Sonoma';
+    } @font-face {
+      font-family: 'Sonoma';
+      font-style: normal;
+      font-weight: 350;
+      src: local(''), url('https://fonts.cdnfonts.com/s/107513/BRSonoma-Regular-BF654c45266c042.woff') format('woff');
+    } @keyframes slideIn {
+        0% {
+            transform: translateY(-100%);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    } .reg-container {
+        animation: slideIn 0.5s ease forwards;
+    }
+</style>
+
+<body class="bg-gray-100 flex justify-center items-center h-screen">
+    <div class="container flex bg-white shadow-lg rounded-lg overflow-hidden w-full lg:w-2/4 reg-container">
+        <div class="w-5/12 p-8">
+            <h1 class="text-3xl font-bold mb-8 logtext">Create Your Account!</h1>
+            <form action="../php/register.php" method="post" id="form" enctype="multipart/form-data">
+                <div class="group">
+                    <div class="form-control mb-4">
+                        <input
+                            class="fname border border-gray-300 px-3 py-2 w-full rounded-md focus:outline-none focus:border-blue-400"
+                            type="text" name="full_name" id="fullname" minlength="2" maxlength="30"
+                            placeholder="Full Name" required>
+                        <small></small>
+                    </div>
+                    <div class="form-control mb-4">
+                        <input
+                            class="border border-gray-300 px-3 py-2 w-full rounded-md focus:outline-none focus:border-blue-400"
+                            type="email" name="email" id="email" placeholder="Email" required>
+                        <small></small>
+                    </div>
+                    <div class="form-control mb-4">
+                        <input
+                            class="border border-gray-300 px-3 py-2 w-full rounded-md focus:outline-none focus:border-blue-400"
+                            type="text" name="username" id="username" placeholder="Username" minlength="3"
+                            maxlength="30" required>
+                        <small></small>
+                        <span id="uname_response"></span>
+                    </div>
+                    <div class="form-control mb-4">
+                        <input
+                            class="border border-gray-300 px-3 py-2 w-full rounded-md focus:outline-none focus:border-blue-400"
+                            type="password" name="password" id="password" placeholder="Password" minlength="6"
+                            maxlength="30" autocomplete="on" required>
+                        <small></small>
+                    </div>
+                    <div class="form-control mb-4">
+                        <input
+                            class="border border-gray-300 px-3 py-2 w-full rounded-md focus:outline-none focus:border-blue-400"
+                            type="password" name="password_confirm" id="confirmpassword" minlength="6" maxlength="30"
+                            placeholder="Confirm Password" autocomplete="on" required>
+                        <small></small>
+                    </div>
+                </div>
+                <button type="submit" value="Submit" name="register"
+                    class="bg-blue-500 text-white px-4 py-2 rounded-md cursor-pointer hover:bg-blue-600 buttonlog">Complete</button>
+                    <a href="login.html" class="text-blue-500 hover:underline px-8 buttonlog">Login</a>
+            </form>
+        </div>
+        <div class="w-7/12 bg-cover bg-center"
+            style="background-image: url('https://cdn.dribbble.com/users/1770290/screenshots/6220590/bg_82.gif');">
+        </div>
+    </div>
+
+    <div id="messageContainer" class="fixed top-4 right-4 z-50"></div>
+    <div id="notificationContainer" class="fixed top-4 right-4 z-50"></div>
+
+
+    <script src="../js/regNotif.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'Rogan-Regular';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''), url('https://fonts.cdnfonts.com/s/107509/Rogan-Regular-BF654c4a9481d1b.woff') format('woff');
+}
+
+.mtext {
+    font-family: 'Rogan-Regular';
+}
+
+.stext {
+    font-family: 'Sonoma';
+}
+
+.wtext {
+    font-family: 'wix';
+}
+
+@font-face {
+    font-family: 'Sonoma';
+    font-style: normal;
+    font-weight: 350;
+    src: local(''), url('https://fonts.cdnfonts.com/s/107513/BRSonoma-Regular-BF654c45266c042.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'wix';
+    font-style: normal;
+    font-weight: 450;
+    src: local('Wix Madefor Display'), url(https://fonts.cdnfonts.com/s/107416/WixMadeforDisplay[wght].woff) format('woff')
+}

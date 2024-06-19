@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/fonts.css">
+</head>
+<body class="bg-gray-100">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-blue-500 py-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-white text-2xl font-bold mtext">Expense Tracking</h1>
+            <ul class="flex justify-center space-x-6 text-white stext">
+                <li><a href="#" onclick="loadContent('display_expenses.php')">HOME</a></li>
+                <li><a href="./expenses.php">EXPENSES</a></li>
+                <li><a href="./history.php">HISTORY</a></li>
+                <li><a href="./profile.php">PROFILE</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div id="content" class="container mx-auto mt-8">
+    </div>
+
+    <div id="notificationContainer" class="fixed top-4 right-4 z-50"></div>
+
+    <script>
+        function loadContent(page) {
+            // Fetch the page content dynamically
+            fetch(page)
+                .then(response => response.text())
+                .then(html => {
+                    // Set the fetched HTML content to the 'content' div
+                    document.getElementById('content').innerHTML = html;
+                })
+                .catch(error => {
+                    console.error('Error fetching content:', error);
+                });
+        }
+   
+        // Load default content when the page loads
+        window.addEventListener('DOMContentLoaded', function() {
+            loadContent('display_expenses.php');
+        });
+    </script>
+    <script src="../js/welcNotif.js"></script>
+</body>
+</html>

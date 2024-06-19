@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="../js/validator001.js"></script>
+</head>
+
+<style>
+  body {
+    background-image: url("https://getfullyfunded.com/wp-content/uploads/2019/03/budget-smallest.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(1.2px);
+  }
+  @keyframes slideIn {
+      0% {
+          transform: translateY(100%);
+      }
+      100% {
+          transform: translateY(0);
+      }
+  } .login-container {
+      animation: slideIn 0.5s ease forwards;
+  } @media (max-width: 768px) {
+      .portrait-container {
+          flex-direction: column;
+      } .bg-cover {
+          height: 150px;
+      }
+  } @font-face {
+      font-family: 'Rogan-Regular';
+      font-style: normal;
+      font-weight: 400;
+      src: local(''), url('https://fonts.cdnfonts.com/s/107509/Rogan-Regular-BF654c4a9481d1b.woff') format('woff');
+  } .logtext {
+      font-family: 'Rogan-Regular';
+  } .buttonlog {
+      font-family: 'Sonoma';
+  } @font-face {
+      font-family: 'Sonoma';
+      font-style: normal;
+      font-weight: 350;
+      src: local(''), url('https://fonts.cdnfonts.com/s/107513/BRSonoma-Regular-BF654c45266c042.woff') format('woff');
+  }
+</style>
+
+<body class="bg-gray-100 flex justify-center items-center h-screen">
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden w-full lg:w-2/4 flex portrait-container login-container">
+        <div class="w-full lg:w-7/12 bg-cover bg-center"
+            style="background-image: url('https://cdn.dribbble.com/users/1770290/screenshots/6220590/bg_82.gif');">
+        </div>
+        <div class="w-full lg:w-5/12 p-8">
+            <h1 class="text-3xl font-bold mb-8 logtext">Welcome to Expenses Tracker</h1>
+            <form onsubmit="login(); return false;" method="post">
+                <div class="mb-6">
+                    <h2 class="text-xl font-bold mb-3 logtext">Login</h2>
+                    <div class="mb-4">
+                        <input type="text" id="username" name="username" placeholder="Enter Username" required
+                            class="border border-gray-300 px-3 py-2 w-full rounded-md focus:outline-none focus:border-blue-400">
+                    </div>
+                    <div class="mb-4">
+                        <input type="password" id="password" name="password" placeholder="Enter Password" required
+                            class="border border-gray-300 px-3 py-2 w-full rounded-md focus:outline-none focus:border-blue-400">
+                    </div>
+                </div>
+                <div class="flex items-center justify-between">
+                    <input type="submit" value="Submit"
+                        class="bg-blue-500 text-white px-4 py-2 rounded-md cursor-pointer hover:bg-blue-600 buttonlog">
+                    <a href="register.html" class="text-blue-500 hover:underline buttonlog">Register</a>
+                    
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="notificationContainer" class="fixed top-4 right-4"></div> <!-- Container for notification -->
+    <script src="../js/loginNotif.js"></script>
+</body>
+
+</html>
